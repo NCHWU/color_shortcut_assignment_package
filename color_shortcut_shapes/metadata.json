@@ -1,0 +1,58 @@
+{
+  "dataset_name": "color_shortcut_shapes",
+  "task": "Classify shape: circle=0, square=1",
+  "shortcut_variable": "color",
+  "training_shortcut_rule": "square is usually red; circle is usually blue",
+  "splits": {
+    "train_shortcut": {
+      "description": "Training split with a strong color-label shortcut.",
+      "color_rule": "P(red|square)=0.95, P(blue|circle)=0.95",
+      "size": 2000
+    },
+    "test_iid": {
+      "description": "IID test split with the same shortcut as training.",
+      "color_rule": "P(red|square)=0.95, P(blue|circle)=0.95",
+      "size": 500
+    },
+    "test_counterfactual": {
+      "description": "Counterfactual test split where the color-label shortcut is reversed.",
+      "color_rule": "P(blue|square)=0.95, P(red|circle)=0.95",
+      "size": 500
+    },
+    "test_balanced_control": {
+      "description": "Control test split where color is independent of shape.",
+      "color_rule": "P(red|shape)=0.5 and P(blue|shape)=0.5 for both shapes",
+      "size": 500
+    }
+  },
+  "image_generation": {
+    "image_size": 64,
+    "background_rgb": [
+      245,
+      245,
+      245
+    ],
+    "min_object_size": 18,
+    "max_object_size": 30,
+    "color_jitter": 18,
+    "square_rotation_range_degrees": [
+      -35,
+      35
+    ],
+    "seed": 42
+  },
+  "citation_motivation": [
+    {
+      "title": "Shortcut Learning in Deep Neural Networks",
+      "authors": "Geirhos et al.",
+      "year": 2020,
+      "url": "https://arxiv.org/abs/2004.07780"
+    },
+    {
+      "title": "Invariant Risk Minimization",
+      "authors": "Arjovsky et al.",
+      "year": 2019,
+      "url": "https://arxiv.org/abs/1907.02893"
+    }
+  ]
+}
