@@ -4,7 +4,7 @@
 **Assignment:** Assignment 2 — Control Dataset for a Single ML/DL Hypothesis  
 **Dataset name:** `color_shortcut_shapes`
 
-> Replace these before submission:  
+
 > **Code:** https://github.com/NCHWU/color_shortcut_assignment_package/blob/main/generate_color_shortcut_dataset.py
 > **Dataset:** https://github.com/NCHWU/color_shortcut_assignment_package/tree/main/color_shortcut_shapes
 
