@@ -6,7 +6,7 @@
 
 > Replace these before submission:  
 > **Code:** https://github.com/NCHWU/color_shortcut_assignment_package/blob/main/generate_color_shortcut_dataset.py
-> **Dataset:** Thttps://github.com/NCHWU/color_shortcut_assignment_package/tree/main/color_shortcut_shapes
+> **Dataset:** https://github.com/NCHWU/color_shortcut_assignment_package/tree/main/color_shortcut_shapes
 
 ---
 
